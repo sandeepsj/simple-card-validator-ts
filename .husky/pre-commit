@@ -1,0 +1,17 @@
+echo "🔍 Running pre-commit checks..."
+
+echo "📦 Building project..."
+npm run build
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed! Commit aborted."
+  exit 1
+fi
+
+echo "🧪 Running tests..."
+npm test
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed! Commit aborted."
+  exit 1
+fi
+
+echo "✅ All checks passed! Proceeding with commit."

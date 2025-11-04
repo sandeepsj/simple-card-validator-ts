@@ -1,0 +1,177 @@
+{
+  "suite": "validateExpiry Test Cases",
+  "description": "Test cases for validateExpiry function that validates expiry date in MM/YYYY format",
+  "validTests": [
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "01/2024",
+      "description": "Current month and year"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "02/2024",
+      "description": "Future month, same year"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "01/2025",
+      "description": "Same month, future year"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "12/2025",
+      "description": "Future month and year"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 6, "year": 2024},
+      "expiry": "06/2024",
+      "description": "Current month June"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 6, "year": 2024},
+      "expiry": "12/2024",
+      "description": "Future month December, same year"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 12, "year": 2024},
+      "expiry": "12/2024",
+      "description": "December current year"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "01/2030",
+      "description": "Far future year"
+    },
+    {
+      "cardNumber": "5555555555554444",
+      "baseDate": {"month": 3, "year": 2024},
+      "expiry": "05/2027",
+      "description": "Mastercard with future date"
+    },
+    {
+      "cardNumber": "378282246310005",
+      "baseDate": {"month": 8, "year": 2024},
+      "expiry": "11/2026",
+      "description": "Amex with future date"
+    }
+  ],
+  "invalidTests": [
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 6, "year": 2024},
+      "expiry": "05/2024",
+      "description": "Past month, same year",
+      "expectedResult": false
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "12/2023",
+      "description": "Past year",
+      "expectedResult": false
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "00/2024",
+      "description": "Invalid month 00",
+      "expectedResult": false
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "13/2024",
+      "description": "Invalid month 13",
+      "expectedResult": false
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "baseDate": {"month": 1, "year": 2024},
+      "expiry": "01/1999",
+      "description": "Invalid year format (not 2xxx)",
+      "expectedResult": false
+    }
+  ],
+  "errorTests": [
+    {
+      "cardNumber": null,
+      "expiry": "01/2024",
+      "description": "No card number set",
+      "expectedError": "Invalid cardNumber property set"
+    },
+    {
+      "cardNumber": "",
+      "expiry": "01/2024",
+      "description": "Empty card number",
+      "expectedError": "Invalid cardNumber property set"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": null,
+      "description": "Null expiry",
+      "expectedError": "Expiry should not be empty"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "",
+      "description": "Empty expiry",
+      "expectedError": "Expiry should not be empty"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "1/2024",
+      "description": "Invalid format - single digit month",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "01/24",
+      "description": "Invalid format - 2-digit year",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "01-2024",
+      "description": "Invalid format - dash separator",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "January/2024",
+      "description": "Invalid format - month name",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "ab/2024",
+      "description": "Invalid format - non-numeric month",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "01/abcd",
+      "description": "Invalid format - non-numeric year",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "01/2024/01",
+      "description": "Invalid format - extra parts",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    },
+    {
+      "cardNumber": "4111111111111111",
+      "expiry": "2024/01",
+      "description": "Invalid format - year first",
+      "expectedError": "Expiry should be in MM/YYYY format"
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+{
+  "suiteName": "Incomplete Test Cards",
+  "testCases": [
+    {
+      "description": "Card 4000000000000001",
+      "cardNumber": "4000000000000001",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4000000000000003",
+      "cardNumber": "4000000000000003",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4000000000000004",
+      "cardNumber": "4000000000000004",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4000000000000005",
+      "cardNumber": "4000000000000005",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111112",
+      "cardNumber": "4111111111111112",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111113",
+      "cardNumber": "4111111111111113",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111114",
+      "cardNumber": "4111111111111114",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111115",
+      "cardNumber": "4111111111111115",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111116",
+      "cardNumber": "4111111111111116",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111117",
+      "cardNumber": "4111111111111117",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111118",
+      "cardNumber": "4111111111111118",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 4111111111111119",
+      "cardNumber": "4111111111111119",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 5100000000000007",
+      "cardNumber": "5100000000000007",
+      "expected": {
+        "card_type": "mastercard",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 5100000000000009",
+      "cardNumber": "5100000000000009",
+      "expected": {
+        "card_type": "mastercard",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 5555555555554443",
+      "cardNumber": "5555555555554443",
+      "expected": {
+        "card_type": "mastercard",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 5555555555554445",
+      "cardNumber": "5555555555554445",
+      "expected": {
+        "card_type": "mastercard",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 5555555555554446",
+      "cardNumber": "5555555555554446",
+      "expected": {
+        "card_type": "mastercard",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 340000000000008",
+      "cardNumber": "340000000000008",
+      "expected": {
+        "card_type": "amex",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          4
+        ],
+        "supported_lengths": [
+          15
+        ]
+      }
+    },
+    {
+      "description": "Card 378282246310004",
+      "cardNumber": "378282246310004",
+      "expected": {
+        "card_type": "amex",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          4
+        ],
+        "supported_lengths": [
+          15
+        ]
+      }
+    },
+    {
+      "description": "Card 378282246310006",
+      "cardNumber": "378282246310006",
+      "expected": {
+        "card_type": "amex",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          4
+        ],
+        "supported_lengths": [
+          15
+        ]
+      }
+    },
+    {
+      "description": "Card 378282246310007",
+      "cardNumber": "378282246310007",
+      "expected": {
+        "card_type": "amex",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          4
+        ],
+        "supported_lengths": [
+          15
+        ]
+      }
+    },
+    {
+      "description": "Card 6011000990139423",
+      "cardNumber": "6011000990139423",
+      "expected": {
+        "card_type": "discover",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 6011000990139425",
+      "cardNumber": "6011000990139425",
+      "expected": {
+        "card_type": "discover",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 6011111111111116",
+      "cardNumber": "6011111111111116",
+      "expected": {
+        "card_type": "discover",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 6011111111111118",
+      "cardNumber": "6011111111111118",
+      "expected": {
+        "card_type": "discover",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 3530111333300001",
+      "cardNumber": "3530111333300001",
+      "expected": {
+        "card_type": "jcb",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 3566002020360504",
+      "cardNumber": "3566002020360504",
+      "expected": {
+        "card_type": "jcb",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 3566002020360506",
+      "cardNumber": "3566002020360506",
+      "expected": {
+        "card_type": "jcb",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 30000000000003",
+      "cardNumber": "30000000000003",
+      "expected": {
+        "card_type": "diners_club_carte_blanche",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          14
+        ]
+      }
+    },
+    {
+      "description": "Card 30000000000005",
+      "cardNumber": "30000000000005",
+      "expected": {
+        "card_type": "diners_club_carte_blanche",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          14
+        ]
+      }
+    },
+    {
+      "description": "Card 38520000023236",
+      "cardNumber": "38520000023236",
+      "expected": {
+        "card_type": "diners_club_international",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          14
+        ]
+      }
+    },
+    {
+      "description": "Card 38520000023238",
+      "cardNumber": "38520000023238",
+      "expected": {
+        "card_type": "diners_club_international",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": true,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          14
+        ]
+      }
+    },
+    {
+      "description": "Card 411111111111111",
+      "cardNumber": "411111111111111",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 41111111111111111",
+      "cardNumber": "41111111111111111",
+      "expected": {
+        "card_type": "visa",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 555555555555444",
+      "cardNumber": "555555555555444",
+      "expected": {
+        "card_type": "mastercard",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 55555555555544444",
+      "cardNumber": "55555555555544444",
+      "expected": {
+        "card_type": "mastercard",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 37828224631000",
+      "cardNumber": "37828224631000",
+      "expected": {
+        "card_type": "amex",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          4
+        ],
+        "supported_lengths": [
+          15
+        ]
+      }
+    },
+    {
+      "description": "Card 3782822463100005",
+      "cardNumber": "3782822463100005",
+      "expected": {
+        "card_type": "amex",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          4
+        ],
+        "supported_lengths": [
+          15
+        ]
+      }
+    },
+    {
+      "description": "Card 601111111111111",
+      "cardNumber": "601111111111111",
+      "expected": {
+        "card_type": "discover",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 60111111111111117",
+      "cardNumber": "60111111111111117",
+      "expected": {
+        "card_type": "discover",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 3056930902590",
+      "cardNumber": "3056930902590",
+      "expected": {
+        "card_type": "diners_club_carte_blanche",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          14
+        ]
+      }
+    },
+    {
+      "description": "Card 305693090259044",
+      "cardNumber": "305693090259044",
+      "expected": {
+        "card_type": "diners_club_carte_blanche",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          14
+        ]
+      }
+    },
+    {
+      "description": "Card 353011133330000",
+      "cardNumber": "353011133330000",
+      "expected": {
+        "card_type": "jcb",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    },
+    {
+      "description": "Card 35301113333000000",
+      "cardNumber": "35301113333000000",
+      "expected": {
+        "card_type": "jcb",
+        "valid": false,
+        "luhn_valid": false,
+        "length_valid": false,
+        "cvv_length": [
+          3
+        ],
+        "supported_lengths": [
+          16
+        ]
+      }
+    }
+  ]
+}

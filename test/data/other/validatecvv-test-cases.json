@@ -1,0 +1,138 @@
+{
+  "suite": "validateCvv Test Cases",
+  "description": "Test cases for validateCvv function that validates CVV based on card type",
+  "testsByCardType": {
+    "visa": {
+      "cardNumber": "4111111111111111",
+      "validCvvs": ["123", "456", "789", "000", "999"],
+      "invalidCvvs": [
+        {
+          "cvv": "12",
+          "description": "Too short - 2 digits"
+        },
+        {
+          "cvv": "1234",
+          "description": "Too long - 4 digits for Visa"
+        },
+        {
+          "cvv": "",
+          "description": "Empty CVV",
+          "expectedError": "CVV should be a number"
+        },
+        {
+          "cvv": "abc",
+          "description": "Non-numeric CVV",
+          "expectedError": "CVV should be a number"
+        },
+        {
+          "cvv": "12a",
+          "description": "Alphanumeric CVV",
+          "expectedError": "CVV should be a number"
+        }
+      ]
+    },
+    "mastercard": {
+      "cardNumber": "5555555555554444",
+      "validCvvs": ["123", "456", "789", "000", "999"],
+      "invalidCvvs": [
+        {
+          "cvv": "12",
+          "description": "Too short - 2 digits"
+        },
+        {
+          "cvv": "1234",
+          "description": "Too long - 4 digits for Mastercard"
+        },
+        {
+          "cvv": "",
+          "description": "Empty CVV",
+          "expectedError": "CVV should be a number"
+        }
+      ]
+    },
+    "amex": {
+      "cardNumber": "378282246310005",
+      "validCvvs": ["1234", "5678", "9999", "0000"],
+      "invalidCvvs": [
+        {
+          "cvv": "123",
+          "description": "Too short - 3 digits for Amex"
+        },
+        {
+          "cvv": "12345",
+          "description": "Too long - 5 digits"
+        },
+        {
+          "cvv": "",
+          "description": "Empty CVV",
+          "expectedError": "CVV should be a number"
+        }
+      ]
+    },
+    "maestro": {
+      "cardNumber": "6759411100000008",
+      "validCvvs": [
+        {
+          "cvv": "",
+          "description": "Empty CVV allowed for Maestro"
+        },
+        {
+          "cvv": "123",
+          "description": "3-digit CVV for Maestro"
+        }
+      ],
+      "invalidCvvs": [
+        {
+          "cvv": "12",
+          "description": "2 digits not allowed"
+        },
+        {
+          "cvv": "1234",
+          "description": "4 digits not allowed for Maestro"
+        }
+      ]
+    },
+    "discover": {
+      "cardNumber": "6011111111111117",
+      "validCvvs": ["123", "456", "789", "000", "999"],
+      "invalidCvvs": [
+        {
+          "cvv": "12",
+          "description": "Too short - 2 digits"
+        },
+        {
+          "cvv": "1234",
+          "description": "Too long - 4 digits for Discover"
+        }
+      ]
+    },
+    "jcb": {
+      "cardNumber": "3530111333300000",
+      "validCvvs": ["123", "456", "789", "000", "999"],
+      "invalidCvvs": [
+        {
+          "cvv": "12",
+          "description": "Too short - 2 digits"
+        },
+        {
+          "cvv": "1234",
+          "description": "Too long - 4 digits for JCB"
+        }
+      ]
+    }
+  },
+  "errorTests": [
+    {
+      "cardNumber": null,
+      "cvv": "123",
+      "description": "No card number set",
+      "expectedError": "Invalid cardNumber property set"
+    },
+    {
+      "cardNumber": "",
+      "cvv": "123",
+      "description": "Empty card number",
+      "expectedError": "Invalid cardNumber property set"
+    }
+  ]
+}

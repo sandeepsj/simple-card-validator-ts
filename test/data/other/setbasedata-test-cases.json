@@ -1,0 +1,101 @@
+{
+    "suite": "setBaseDate Test Cases",
+    "description": "Test cases for setBaseDate function that sets + base month and year for expiry validation",
+    "validTests": [
+        {
+            "month": 1,
+            "year": 2024,
+            "description": "Valid January 2024"
+        },
+        {
+            "month": 12,
+            "year": 2024,
+            "description": "Valid December 2024"
+        },
+        {
+            "month": 6,
+            "year": 2025,
+            "description": "Valid June 2025"
+        },
+        {
+            "month": "01",
+            "year": "2024",
+            "description": "Valid string format January 2024"
+        },
+        {
+            "month": "12",
+            "year": "2025",
+            "description": "Valid string format December 2025"
+        },
+        {
+            "month": 5,
+            "year": 2030,
+            "description": "Valid future date May 2030"
+        },
+        {
+            "month": null,
+            "year": 2024,
+            "description": "Valid with null month (should use current + month)"
+        },
+        {
+            "month": 5,
+            "year": null,
+            "description": "Valid with null year (should use current  + year)"
+        },
+        {
+            "month": null,
+            "year": null,
+            "description": "Valid with both null (should use current + date)"
+        }
+    ],
+    "invalidTests": [
+        {
+            "month": 0,
+            "year": 2024,
+            "description": "Invalid month 0",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        },
+        {
+            "month": 13,
+            "year": 2024,
+            "description": "Invalid month 13",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        },
+        {
+            "month": -1,
+            "year": 2024,
+            "description": "Invalid negative month",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        },
+        {
+            "month": 5,
+            "year": "abc",
+            "description": "Invalid non-numeric year",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        },
+        {
+            "month": "abc",
+            "year": 2024,
+            "description": "Invalid non-numeric month",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        },
+        {
+            "month": 15,
+            "year": 2024,
+            "description": "Invalid month greater than 12",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        },
+        {
+            "month": 5.5,
+            "year": 2024,
+            "description": "Invalid decimal month",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        },
+        {
+            "month": 5,
+            "year": 2024.5,
+            "description": "Invalid decimal year",
+            "expectedError": "Invalid date format. Use MM, YYYY format"
+        }
+    ]
+}
