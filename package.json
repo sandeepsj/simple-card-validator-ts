@@ -2,10 +2,21 @@
   "name": "simple-card-validator-ts",
   "version": "1.1.0",
   "description": "A TypeScript library for validating credit card numbers, determining card types, and providing card-specific information like CVV length",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:types": "tsc -p tsconfig.types.json",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "test": "jest",
