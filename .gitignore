@@ -5,9 +5,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build outputs
-dist/
 build/
 *.tsbuildinfo
+# Note: dist/ is not ignored for npm/GitHub package consumption
 
 # Environment variables
 .env

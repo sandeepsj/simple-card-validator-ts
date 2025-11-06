@@ -7,16 +7,19 @@
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js",
-      "types": "./dist/types/index.d.ts"
-    }
+      "default": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:package-json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:types": "tsc -p tsconfig.types.json",
+    "build:package-json": "echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json && echo '{\"type\":\"module\"}' > dist/esm/package.json",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "test": "jest",
